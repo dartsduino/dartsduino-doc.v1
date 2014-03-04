@@ -1,7 +1,9 @@
 {
   "name": "dartsduino-doc",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "marked": "^0.3.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
