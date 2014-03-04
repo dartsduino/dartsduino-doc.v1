@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "jquery": "~1.10.2",
-    "impress.js": "~0.5.3"
+    "impress.js": "~0.5.3",
+    "marked": "~0.3.1"
   },
   "devDependencies": {}
 }
