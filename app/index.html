@@ -12,12 +12,11 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-
+        <link rel="stylesheet" href="bower_components/impress.js/css/impress-demo.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="bower_components/impress.js/css/impress-demo.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -27,23 +26,27 @@
 
         <div id="impress">
 
-          <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-            <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
-          </div>
+            <div id="markdown" class="step slide" data-x="-2000" data-y="-1500">
+                <div id="presentation"></div>
+            </div>
 
-          <div class="step slide" data-x="0" data-y="-1500">
-            <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
-          </div>
+            <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+                <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+            </div>
 
-          <div class="step slide" data-x="1000" data-y="-1500">
-            <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-          </div>
+            <div class="step slide" data-x="0" data-y="-1500">
+                <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+            </div>
 
-          <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-            <span class="try">then you should try</span>
-            <h1>impress.js<sup>*</sup></h1>
-            <span class="footnote"><sup>*</sup> no rhyme intended</span>
-          </div>
+            <div class="step slide" data-x="1000" data-y="-1500">
+                <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+            </div>
+
+            <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+                <span class="try">then you should try</span>
+                <h1>impress.js<sup>*</sup></h1>
+                <span class="footnote"><sup>*</sup> no rhyme intended</span>
+            </div>
 
         </div>
 
@@ -51,7 +54,7 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/impress.js/js/impress.js"></script>
-
+        <script src="bower_components/marked/lib/marked.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -69,6 +72,10 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/presentation.js -->
+        <script src="scripts/presentation.js"></script>
         <!-- endbuild -->
 </body>
 </html>

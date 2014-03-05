@@ -1,1 +1,7 @@
-console.log('\'Allo \'Allo!');
+/* global impress */
+
+'use strict';
+
+$(function () {
+    impress().init();
+});

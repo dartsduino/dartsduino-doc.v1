@@ -58,6 +58,13 @@ module.exports = function (grunt) {
                     '.tmp/styles/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
                 ]
+            },
+            presentation: {
+                files: ['<%= yeoman.app %>/scripts/presentation.js', '<%= yeoman.app %>/presentation.md'],
+                tasks: ['replace:livereload', 'uglify:livereload'],
+                options: {
+                    livereload: true
+                }
             }
         },
 
@@ -292,6 +299,16 @@ module.exports = function (grunt) {
         //     dist: {}
         // },
 
+        uglify: {
+            livereload: {
+                files: {
+                    '.tmp/scripts/presentation.js': [
+                        '.tmp/scripts/presentation.js'
+                    ]
+                }
+            }
+        },
+
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -335,6 +352,35 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        replace: {
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'presentation',
+                            replacement: '<%= grunt.file.read("app/presentation.md") %>'
+                        }
+                    ]
+                },
+                files: [
+                    {expand: true, flatten: true, src: ['.tmp/concat/scripts/presentation.js'], dest: '.tmp/concat/scripts/'}
+                ]
+            },
+            livereload: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'presentation',
+                            replacement: '<%= grunt.file.read("app/presentation.md") %>'
+                        }
+                    ]
+                },
+                files: [
+                    {expand: true, flatten: true, src: ['app/scripts/presentation.js'], dest: '.tmp/scripts/'}
+                ]
+            }
         }
     });
 
@@ -379,6 +425,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'autoprefixer',
         'concat',
+        'replace:dist',
         'cssmin',
         'uglify',
         'copy:dist',
@@ -392,4 +439,9 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('rep', [
+        'replace:dist'
+    ]);
+
 };
