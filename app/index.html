@@ -17,6 +17,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="bower_components/impress.js/css/impress-demo.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -24,21 +25,33 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div id="impress">
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass with Compass</li>
+          <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+            <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+          </div>
 
-          </ul>
+          <div class="step slide" data-x="0" data-y="-1500">
+            <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+          </div>
+
+          <div class="step slide" data-x="1000" data-y="-1500">
+            <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+          </div>
+
+          <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+            <span class="try">then you should try</span>
+            <h1>impress.js<sup>*</sup></h1>
+            <span class="footnote"><sup>*</sup> no rhyme intended</span>
+          </div>
+
         </div>
-
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/impress.js/js/impress.js"></script>
+
         <!-- endbower -->
         <!-- endbuild -->
 
