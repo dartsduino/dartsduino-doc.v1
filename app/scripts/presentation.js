@@ -76,6 +76,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
     var id = 'page' + state.page;
     var classes = '';
+    var rotate = 0;
     if (params) {
         if (params.x) {
             state.x = Number(params.x);
@@ -105,6 +106,9 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         if (params['class']) {
             classes = params['class'];
         }
+        if (params.rotate) {
+            rotate = params.rotate;
+        }
     }
 
     var html = '';
@@ -118,6 +122,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         ' data-x="' + state.x + '"' +
         ' data-y="' + state.y + '"' +
         ' data-z="' + state.z + '"' +
+        ' data-rotate="' + rotate + '"' +
         ' data-scale="' + state.scale + '">\n';
 
     html += '<h' + level + '>' + text + '</h' + level + '>\n';
