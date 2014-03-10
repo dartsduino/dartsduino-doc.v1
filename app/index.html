@@ -17,6 +17,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -25,29 +26,6 @@
         <![endif]-->
 
         <div id="impress">
-
-            <div id="markdown" class="step slide" data-x="-2000" data-y="-1500">
-                <div id="presentation"></div>
-            </div>
-
-            <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-                <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
-            </div>
-
-            <div class="step slide" data-x="0" data-y="-1500">
-                <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
-            </div>
-
-            <div class="step slide" data-x="1000" data-y="-1500">
-                <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-            </div>
-
-            <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-                <span class="try">then you should try</span>
-                <h1>impress.js<sup>*</sup></h1>
-                <span class="footnote"><sup>*</sup> no rhyme intended</span>
-            </div>
-
         </div>
 
         <!-- build:js scripts/vendor.js -->
@@ -55,6 +33,7 @@
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/impress.js/js/impress.js"></script>
         <script src="bower_components/marked/lib/marked.js"></script>
+        <script src="bower_components/highlightjs/highlight.pack.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -75,7 +54,7 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/presentation.js -->
-        <script src="scripts/presentation.js"></script>
         <!-- endbuild -->
+        <script src="scripts/presentation.js"></script>
 </body>
 </html>

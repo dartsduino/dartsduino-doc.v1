@@ -1,7 +1,8 @@
-/* global impress */
+/* global ImpressMd */
 
 'use strict';
 
 $(function () {
-    impress().init();
+    var impressMd = new ImpressMd();
+    impressMd.init();
 });
