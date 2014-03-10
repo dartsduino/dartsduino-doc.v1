@@ -49,7 +49,7 @@ ImpressMd.parse = function (text) {
     for (var i = 0; i < strings.length; i++) {
         // console.log(strings[i]);
 
-        if (strings[i].match(/\s*(\w+):\s*([\w-]+)/)) {
+        if (strings[i].match(/\s*(\w+):\s*'*([\w-]+)'*/)) {
             var key = RegExp.$1;
             var value = RegExp.$2;
             // console.log(key + ': ' + value);
@@ -74,6 +74,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     }
     // console.log(params);
 
+    var classes = '';
     if (params) {
         if (params.x) {
             state.x = Number(params.x);
@@ -96,6 +97,10 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         if (params.scale) {
             state.scale = Number(params.scale);
         }
+
+        if (params['class']) {
+            classes = params['class'];
+        }
     }
 
     var html = '';
@@ -105,7 +110,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     }
 
     html += '<div id="page' + state.page + '"' +
-        ' class="step slide"' +
+        ' class="step ' + classes + '"' +
         ' data-x="' + state.x + '"' +
         ' data-y="' + state.y + '"' +
         ' data-z="' + state.z + '"' +
