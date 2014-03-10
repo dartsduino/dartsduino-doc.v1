@@ -155,3 +155,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
     return html;
 };
+
+ImpressMd.prototype.renderer.strong = function (text) {
+    return '<b>' + text + '</b>';
+};
