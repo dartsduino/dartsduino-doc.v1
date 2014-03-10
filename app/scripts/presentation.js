@@ -142,14 +142,13 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
     html += '<h' + level + '>' + text + '</h' + level + '>\n';
 
-    state.page++;
-    state.isOpenBracket = true;
-
     // console.log(html);
 
+    state.page++;
     state.x += state.dx;
     state.y += state.dy;
     state.z += state.dz;
+    state.isOpenBracket = true;
 
     return html;
 };
