@@ -39,7 +39,7 @@ ImpressMd.prototype.init = function(elementId) {
 
 ImpressMd.prototype.renderer = new marked.Renderer();
 
-ImpressMd.prototype.renderer.hr = function () {
+ImpressMd.prototype.renderer.heading = function (text, level) {
     var state = ImpressMd.state;
 
     var html = '';
@@ -54,6 +54,9 @@ ImpressMd.prototype.renderer.hr = function () {
         ' data-y="' + state.y + '"' +
         ' data-z="' + state.z + '"' +
         ' data-scale="' + state.scale + '">\n';
+
+    html += '<h' + level + '>' + text + '</h' + level + '>\n';
+
     state.page++;
     state.isOpenBracket = true;
 
