@@ -5,8 +5,12 @@
 
 This is a test.
 
-```
+```js
 var this = new Test();
+var foo;
+if (true) {
+    foo = 'abc';
+}
 ```
 
 ----

@@ -61,7 +61,8 @@ module.exports = function (grunt) {
             },
             presentation: {
                 files: ['<%= yeoman.app %>/scripts/presentation.js', '<%= yeoman.app %>/presentation.md'],
-                tasks: ['replace:livereload', 'uglify:livereload'],
+                // tasks: ['uglify:livereload', 'replace:livereload'],
+                tasks: ['replace:livereload'],
                 options: {
                     livereload: true
                 }
@@ -360,7 +361,7 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'presentation',
-                            replacement: '<%= grunt.file.read("app/presentation.md") %>'
+                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n") %>'
                         }
                     ]
                 },
@@ -373,7 +374,7 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'presentation',
-                            replacement: '<%= grunt.file.read("app/presentation.md") %>'
+                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n") %>'
                         }
                     ]
                 },
@@ -425,9 +426,9 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        'replace:dist',
         'cssmin',
         'uglify',
+        'replace:dist',
         'copy:dist',
         'rev',
         'usemin',

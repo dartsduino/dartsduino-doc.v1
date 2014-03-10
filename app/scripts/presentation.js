@@ -1,4 +1,4 @@
-/* global impress, marked */
+/* global impress, marked, hljs */
 
 'use strict';
 
@@ -16,6 +16,16 @@ ImpressMd.state = {
 };
 
 ImpressMd.prototype.init = function(elementId) {
+    marked.setOptions({
+        highlight: function (code, lang) {
+            if (lang) {
+                return hljs.highlight(lang, code).value;
+            } else {
+                return hljs.highlightAuto(code).value;
+            }
+        }
+    });
+
     var markedContent = marked(this.content, {renderer: this.renderer}) + '</div>';
     // console.log(markedContent);
 
