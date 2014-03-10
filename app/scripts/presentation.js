@@ -74,12 +74,15 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     }
     // console.log(params);
 
-    var id = 'page' + state.page;
-    var classes = '';
-    var rotate = 0;
-    var rotate_x = 0;
-    var rotate_y = 0;
-    var rotate_z = 0;
+    var config = {
+        id: 'page' + state.page,
+        classes: 'step',
+        rotate: 0,
+        rotate_x: 0,
+        rotate_y: 0,
+        rotate_z: 0
+    };
+
     if (params) {
         if (params.x) {
             state.x = Number(params.x);
@@ -104,22 +107,22 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         }
 
         if (params.id) {
-            id = params.id;
+            config.id = params.id;
         }
         if (params['class']) {
-            classes = params['class'];
+            config.classes += " " + params['class'];
         }
         if (params.rotate) {
-            rotate = params.rotate;
+            config.rotate = params.rotate;
         }
         if (params['rotate-x']) {
-            rotate_x = params['rotate-x'];
+            config.rotate_x = params['rotate-x'];
         }
         if (params['rotate-y']) {
-            rotate_y = params['rotate-y'];
+            config.rotate_y = params['rotate-y'];
         }
         if (params['rotate-z']) {
-            rotate_z = params['rotate-z'];
+            config.rotate_z = params['rotate-z'];
         }
     }
 
@@ -129,15 +132,15 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         html += '</div>\n';
     }
 
-    html += '<div id="' + id + '"' +
-        ' class="step ' + classes + '"' +
+    html += '<div id="' + config.id + '"' +
+        ' class="' + config.classes + '"' +
         ' data-x="' + state.x + '"' +
         ' data-y="' + state.y + '"' +
         ' data-z="' + state.z + '"' +
-        (rotate ? ' data-rotate="' + rotate + '"' : '') +
-        (rotate_x ? ' data-rotate-x="' + rotate_x + '"' : '') +
-        (rotate_y ? ' data-rotate-y="' + rotate_y + '"' : '') +
-        (rotate_z ? ' data-rotate-z="' + rotate_z + '"' : '') +
+        (config.rotate ? ' data-rotate="' + config.rotate + '"' : '') +
+        (config.rotate_x ? ' data-rotate-x="' + config.rotate_x + '"' : '') +
+        (config.rotate_y ? ' data-rotate-y="' + config.rotate_y + '"' : '') +
+        (config.rotate_z ? ' data-rotate-z="' + config.rotate_z + '"' : '') +
         ' data-scale="' + state.scale + '">\n';
 
     html += '<h' + level + '>' + text + '</h' + level + '>\n';
