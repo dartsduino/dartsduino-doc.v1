@@ -7,7 +7,7 @@ var ImpressMd = function () {
 };
 
 ImpressMd.state = {
-    page: 0,
+    page: 1,
     x: 0,
     y: 0,
     z: 0,
@@ -74,6 +74,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     }
     // console.log(params);
 
+    var id = 'page' + state.page;
     var classes = '';
     if (params) {
         if (params.x) {
@@ -98,6 +99,9 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
             state.scale = Number(params.scale);
         }
 
+        if (params.id) {
+            id = params.id;
+        }
         if (params['class']) {
             classes = params['class'];
         }
@@ -109,7 +113,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         html += '</div>\n';
     }
 
-    html += '<div id="page' + state.page + '"' +
+    html += '<div id="' + id + '"' +
         ' class="step ' + classes + '"' +
         ' data-x="' + state.x + '"' +
         ' data-y="' + state.y + '"' +
