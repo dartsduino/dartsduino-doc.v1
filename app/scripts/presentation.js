@@ -16,6 +16,8 @@ ImpressMd.state = {
 };
 
 ImpressMd.prototype.init = function(elementId) {
+    var state = ImpressMd.state;
+
     marked.setOptions({
         highlight: function (code, lang) {
             if (lang) {
@@ -26,7 +28,8 @@ ImpressMd.prototype.init = function(elementId) {
         }
     });
 
-    var markedContent = marked(this.content, {renderer: this.renderer}) + '</div>';
+    var markedContent = marked(this.content, {renderer: this.renderer}) +
+        (state.isOpenBracket ? '</div>' : '');
     // console.log(markedContent);
 
     $('#impress').prepend($(markedContent));
