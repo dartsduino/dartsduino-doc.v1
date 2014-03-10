@@ -63,8 +63,6 @@ ImpressMd.parse = function (text) {
 
 ImpressMd.prototype.renderer = new marked.Renderer();
 
-
-
 ImpressMd.prototype.renderer.heading = function (text, level) {
     var state = ImpressMd.state;
 
