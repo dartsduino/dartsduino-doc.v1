@@ -1,24 +1,17 @@
 
-## Test    <!-- x: -1000, y: -1500, class: 'slide' -->
+##     <!-- id: 'bored', class: 'slide', x: -1000, y: -1500 -->
 
-This is a test.
-
-```js
-var this = new Test();
-var foo;
-if (true) {
-    foo = 'abc';
-}
-```
-
-## Page 2    <!-- class: 'slide' -->
-
-This should come to page 2.
+<q>Aren't you just **bored** with all those slides-based presentations?</q>
 
 
-## Page 3    <!-- class: 'slide' -->
+##     <!-- class: 'slide', x: 0, y: -1500 -->
 
-And page 3, right?
+<q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+
+
+##     <!-- class: 'slide', x: 1000, y: -1500 -->
+
+<q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
 
 
 ##     <!-- id: 'title', x: 0, y: 0, scale: 4 -->
