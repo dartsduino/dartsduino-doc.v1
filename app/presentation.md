@@ -7,7 +7,7 @@
 ##     <!-- x: 0, y: 0, z: 200, rotate-x: -70, rotate-y: -45 -->
 
 <div id='layers' class='center'>
-    <img class='layer' id='layer1' src='images/back.jpg' width='560'>
-    <img class='layer' id='layer2' src='images/back.jpg' width='560'>
-    <img class='layer' id='layer3' src='images/back.jpg' width='560'>
+    ![Layer 1   <!-- class: 'layer', id: 'layer1', width: 560 -->](images/back.jpg)
+    ![Layer 2   <!-- class: 'layer', id: 'layer2', width: 560 -->](images/back.jpg)
+    ![Layer 3   <!-- class: 'layer', id: 'layer3', width: 560 -->](images/back.jpg)
 </div>

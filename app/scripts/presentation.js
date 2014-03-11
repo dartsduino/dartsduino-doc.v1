@@ -61,6 +61,12 @@ ImpressMd.parse = function (text) {
     return params;
 };
 
+ImpressMd.htmlDecode = function (input) {
+    var e = document.createElement('div');
+    e.innerHTML = input;
+    return e.childNodes.length === 0 ? '' : e.childNodes[0].nodeValue;
+}
+
 ImpressMd.prototype.renderer = new marked.Renderer();
 
 ImpressMd.prototype.renderer.heading = function (text, level) {
@@ -158,4 +164,32 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
 ImpressMd.prototype.renderer.strong = function (text) {
     return '<b>' + text + '</b>';
+};
+
+ImpressMd.prototype.renderer.image = function (href, title, text) {
+    var params = null;
+    if (ImpressMd.htmlDecode(text).match(/(.*)<!-- (.+) -->/)) {
+        params = ImpressMd.parse(RegExp.$2);
+        text = escape(RegExp.$1.replace(/\s+$/, ''));
+    }
+    // console.log(params);
+
+    var out = '<img src="' + href + '" alt="' + text + '"';
+    if (title) {
+        out += ' title="' + title + '"';
+    }
+    if (params) {
+        if (params['class']) {
+            out += ' class="' + params['class'] + '"';
+        }
+        if (params.id) {
+            out += ' id="' + params.id + '"';
+        }
+        if (params.width) {
+            out += ' width="' + params.width + '"';
+        }
+    }
+
+    out += '>';
+    return out;
 };
