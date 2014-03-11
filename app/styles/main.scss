@@ -54,7 +54,7 @@ pre {
 
 .layer {
     position: absolute;
-    transition: opacity 1s ease 0.2s;
+    transition: opacity 1s ease 0.2s, transform 1s ease;
 }
 
 #layer0 {
@@ -65,18 +65,20 @@ $layer-rotate-y: 45deg;
 $layer-rotate-x: 70deg;
 $layer-margin: 100px;
 
-#layer1 {
-    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 0);
-}
-
-#layer2 {
-    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 1);
-}
-
-#layer3 {
-    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 2);
-}
-
 :not(.active) > div > img {
     opacity: 0;
+}
+
+div > div > img {
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x);
+    transition: transform 1s ease;
+}
+
+.present > div {
+    @for $i from 1 through 3 {
+        #layer#{$i} {
+            transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * $i - 100);
+            transition: transform 1s ease 0.5s;
+        }
+    }
 }
