@@ -4,7 +4,7 @@
 <img id='layer0' src='images/back.jpg' width='560' height='693' class='center'>
 
 
-##     <!-- x: 0, y: 0, z: 200, rotate-x: -70 -->
+##     <!-- x: 0, y: 0, z: 200, rotate-x: -70, rotate-y: -45 -->
 
 <div id='layers' class='center'>
     <img class='layer' id='layer1' src='images/back.jpg' width='560'>

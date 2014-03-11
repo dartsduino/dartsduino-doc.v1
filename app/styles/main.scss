@@ -54,21 +54,29 @@ pre {
 
 .layer {
     position: absolute;
-    top: 0;
+    transition: opacity 1s ease 0.2s;
 }
 
 #layer0 {
     transform: rotateX(0deg);
 }
 
+$layer-rotate-y: 45deg;
+$layer-rotate-x: 70deg;
+$layer-margin: 100px;
+
 #layer1 {
-    transform: rotateX(70deg) translateZ(  0px);
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 0);
 }
 
 #layer2 {
-    transform: rotateX(70deg) translateZ(100px);
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 1);
 }
 
 #layer3 {
-    transform: rotateX(70deg) translateZ(200px);
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 2);
+}
+
+:not(.active) > div > img {
+    opacity: 0;
 }
