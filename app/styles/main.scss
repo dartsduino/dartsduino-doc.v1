@@ -39,3 +39,36 @@ h2 {
 pre {
     font-size: 24px;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layers {
+    position: relative;
+    width: 560px;
+    height: 693px;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+}
+
+#layer0 {
+    transform: rotateX(0deg);
+}
+
+#layer1 {
+    transform: rotateX(70deg) translateZ(  0px);
+}
+
+#layer2 {
+    transform: rotateX(70deg) translateZ(100px);
+}
+
+#layer3 {
+    transform: rotateX(70deg) translateZ(200px);
+}
