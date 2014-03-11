@@ -39,3 +39,44 @@ h2 {
 pre {
     font-size: 24px;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layers {
+    position: relative;
+    width: 560px;
+    height: 693px;
+}
+
+.layer {
+    position: absolute;
+    transition: opacity 1s ease 0.2s;
+}
+
+#layer0 {
+    transform: rotateX(0deg);
+}
+
+$layer-rotate-y: 45deg;
+$layer-rotate-x: 70deg;
+$layer-margin: 100px;
+
+#layer1 {
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 0);
+}
+
+#layer2 {
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 1);
+}
+
+#layer3 {
+    transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * 2);
+}
+
+:not(.active) > div > img {
+    opacity: 0;
+}
