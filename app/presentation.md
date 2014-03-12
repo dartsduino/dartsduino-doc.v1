@@ -13,6 +13,10 @@
 * 中高生への良い刺激
 
 
+## Web とリアルをつなげる    <!-- class: 'slide', scale: 0.5 -->
+
+
+
 ##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
 
 <img id='layer0' src='images/back.jpg' width='560' height='693' class='center'>
