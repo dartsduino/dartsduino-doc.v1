@@ -81,12 +81,7 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
     var config = {
         id: 'page' + state.page,
-        classes: 'step',
-        scale: 1,
-        rotate: 0,
-        rotate_x: 0,
-        rotate_y: 0,
-        rotate_z: 0
+        classes: 'step'
     };
 
     if (params) {
