@@ -1,23 +1,40 @@
 
 ## dartsduino    <!-- class: 'slide' -->
 
-<q>
-  Ikuo TERADO
-</q>
+寺戸 育夫
 
 
-## 動機    <!-- class: 'slide', dx: 0, dy: 0 -->
+## 自己紹介    <!-- class: 'slide' -->
+
+* 所属
+* 関わった商品
 
 
-## Web とリアルをつなげる    <!-- class: 'slide', tx: -250, scale: 0.25 -->
+## 背景    <!-- class: 'slide', dx: 0, dy: 0 -->
 
-## GitFab                  <!-- class: 'slide', scale: 0.25 -->
+### Web とリアルをつなげる    <!-- class: 'slide', tx: -250, scale: 0.25 -->
 
-## 中高生への良い刺激        <!-- class: 'slide', tx: 250, scale: 0.25 -->
+### GitFab                  <!-- class: 'slide', scale: 0.25 -->
+
+### 中高生への良い刺激        <!-- class: 'slide', tx: 250, scale: 0.25 -->
 
 ##     <!-- dx: 1500, dy: 0 -->
 
+
+## 考えた要素    <!-- class: 'slide' -->
+
+* 物理的な何かとのインタラクション
+* 集合知の活用
+* 安価、簡易
+
+
 ## dartsduino    <!-- class: 'slide' -->
+
+<br>
+<_iframe id='player' type='text/html' width='720' height='500'
+  src='http://www.youtube.com/embed/sHt_5in-ziQ'
+  frameborder='0' class='center'>
+</_iframe>
 
 
 ##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
@@ -28,9 +45,9 @@
 ##     <!-- rotate-x: -70, rotate-y: -45, dx: 1500, dy: 0, dz: 0 -->
 
 <div id='layers' class='center'>
-    ![Layer 1   <!-- class: 'layer', id: 'layer1', width: 560 -->](images/back.jpg)
-    ![Layer 2   <!-- class: 'layer', id: 'layer2', width: 560 -->](images/back.jpg)
-    ![Layer 3   <!-- class: 'layer', id: 'layer3', width: 560 -->](images/back.jpg)
+  ![Layer 1   <!-- class: 'layer', id: 'layer1', width: 560 -->](images/back.jpg)
+  ![Layer 2   <!-- class: 'layer', id: 'layer2', width: 560 -->](images/back.jpg)
+  ![Layer 3   <!-- class: 'layer', id: 'layer3', width: 560 -->](images/back.jpg)
 </div>
 
 
