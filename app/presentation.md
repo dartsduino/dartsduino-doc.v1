@@ -6,15 +6,18 @@
 </q>
 
 
-## 動機    <!-- class: 'slide' -->
-
-* Web とリアルをつなげる
-* GitFab
-* 中高生への良い刺激
+## 動機    <!-- class: 'slide', dx: 0, dy: 0 -->
 
 
-## Web とリアルをつなげる    <!-- class: 'slide', scale: 0.5 -->
+## Web とリアルをつなげる    <!-- class: 'slide', tx: -250, scale: 0.25 -->
 
+## GitFab                  <!-- class: 'slide', scale: 0.25 -->
+
+## 中高生への良い刺激        <!-- class: 'slide', tx: 250, scale: 0.25 -->
+
+##     <!-- dx: 1500, dy: 0 -->
+
+## dartsduino    <!-- class: 'slide' -->
 
 
 ##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
