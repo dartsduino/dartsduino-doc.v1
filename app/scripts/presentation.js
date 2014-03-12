@@ -49,7 +49,7 @@ ImpressMd.parse = function (text) {
     for (var i = 0; i < strings.length; i++) {
         // console.log(strings[i]);
 
-        if (strings[i].match(/\s*([\w-]+):\s*'*([\w-]+)'*/)) {
+        if (strings[i].match(/\s*([\w-]+):\s*'*([\w-.]+)'*/)) {
             var key = RegExp.$1;
             var value = RegExp.$2;
             // console.log(key + ': ' + value);
