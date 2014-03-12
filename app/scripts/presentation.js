@@ -11,7 +11,7 @@ ImpressMd.state = {
     x: 0,
     y: 0,
     z: 0,
-    dx: 1000,
+    dx: 1500,
     dy: 0,
     dz: 0,
     scale: 1,
