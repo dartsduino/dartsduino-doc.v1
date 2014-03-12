@@ -11,10 +11,9 @@ ImpressMd.state = {
     x: 0,
     y: 0,
     z: 0,
-    dx: 1000,
+    dx: 1500,
     dy: 0,
     dz: 0,
-    scale: 1,
     isOpenBracket: false
 };
 
@@ -49,7 +48,7 @@ ImpressMd.parse = function (text) {
     for (var i = 0; i < strings.length; i++) {
         // console.log(strings[i]);
 
-        if (strings[i].match(/\s*([\w-]+):\s*'*([\w-]+)'*/)) {
+        if (strings[i].match(/\s*([\w-]+):\s*'*([\w-.]+)'*/)) {
             var key = RegExp.$1;
             var value = RegExp.$2;
             // console.log(key + ': ' + value);
@@ -83,10 +82,9 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     var config = {
         id: 'page' + state.page,
         classes: 'step',
-        rotate: 0,
-        rotate_x: 0,
-        rotate_y: 0,
-        rotate_z: 0
+        tx: 0,
+        ty: 0,
+        tz: 0
     };
 
     if (params) {
@@ -108,8 +106,14 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         if (params.dz) {
             state.dz = Number(params.dz);
         }
-        if (params.scale) {
-            state.scale = Number(params.scale);
+        if (params.tx) {
+            config.tx = Number(params.tx);
+        }
+        if (params.ty) {
+            config.ty = Number(params.ty);
+        }
+        if (params.tz) {
+            config.tz = Number(params.tz);
         }
 
         if (params.id) {
@@ -117,6 +121,9 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
         }
         if (params['class']) {
             config.classes += " " + params['class'];
+        }
+        if (params.scale) {
+            config.scale = Number(params.scale);
         }
         if (params.rotate) {
             config.rotate = params.rotate;
@@ -140,14 +147,15 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
 
     html += '<div id="' + config.id + '"' +
         ' class="' + config.classes + '"' +
-        ' data-x="' + state.x + '"' +
-        ' data-y="' + state.y + '"' +
-        ' data-z="' + state.z + '"' +
-        (config.rotate ? ' data-rotate="' + config.rotate + '"' : '') +
+        ' data-x="' + (state.x + config.tx) + '"' +
+        ' data-y="' + (state.y + config.ty) + '"' +
+        ' data-z="' + (state.z + config.tz) + '"' +
+        (config.scale    ? ' data-scale="'    + config.scale    + '"' : '') +
+        (config.rotate   ? ' data-rotate="'   + config.rotate   + '"' : '') +
         (config.rotate_x ? ' data-rotate-x="' + config.rotate_x + '"' : '') +
         (config.rotate_y ? ' data-rotate-y="' + config.rotate_y + '"' : '') +
         (config.rotate_z ? ' data-rotate-z="' + config.rotate_z + '"' : '') +
-        ' data-scale="' + state.scale + '">\n';
+        '>\n';
 
     html += '<h' + level + '>' + text + '</h' + level + '>\n';
 
