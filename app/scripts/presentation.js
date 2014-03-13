@@ -74,8 +74,9 @@ ImpressMd.prototype.renderer.heading = function (text, level) {
     var params = null;
 
     // console.log(text);
-    if (text.match(/<!-- (.+) -->/)) {
-        params = ImpressMd.parse(RegExp.$1);
+    if (text.match(/(.*)<!-- (.+) -->/)) {
+        text = RegExp.$1;
+        params = ImpressMd.parse(RegExp.$2);
     }
     // console.log(params);
 

@@ -46,6 +46,14 @@ pre {
     margin-right: auto;
 }
 
+#front {
+    transition: opacity 1s ease;
+}
+
+:not(.active) > p > #front {
+    opacity: 0;
+}
+
 #layers {
     position: relative;
     width: 560px;
@@ -81,4 +89,12 @@ div > div > img {
             transition: transform 1s ease 0.5s;
         }
     }
+}
+
+#connector {
+    transition: opacity 1s ease;
+}
+
+:not(.active) > p > #connector {
+    opacity: 0;
 }
