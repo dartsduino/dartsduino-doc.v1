@@ -44,7 +44,7 @@
 
 ##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
 
-<img id='layer0' src='images/back.jpg' width='560' height='693' class='center'>
+![Back    <!-- class: 'center', id: 'back', width: 560 -->](images/back.jpg)
 
 
 ##     <!-- rotate-x: -70, rotate-y: -45, dx: 0, dy: 0, dz: 0 -->
