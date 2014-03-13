@@ -40,6 +40,10 @@ pre {
     font-size: 24px;
 }
 
+img {
+    backface-visibility: hidden;
+}
+
 .center {
     display: block;
     margin-left: auto;
