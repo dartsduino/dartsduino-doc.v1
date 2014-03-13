@@ -37,6 +37,11 @@
 </_iframe>
 
 
+##     <!-- x: 0, y: 2000, z: -10, rotate-y: 180 -->
+
+![Front   <!-- class: 'center', id: 'front', width: 560 -->](images/front.jpg)
+
+
 ##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
 
 <img id='layer0' src='images/back.jpg' width='560' height='693' class='center'>

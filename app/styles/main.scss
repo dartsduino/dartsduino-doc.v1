@@ -46,6 +46,14 @@ pre {
     margin-right: auto;
 }
 
+#front {
+    transition: opacity 1s ease;
+}
+
+:not(.active) > p > #front {
+    opacity: 0;
+}
+
 #layers {
     position: relative;
     width: 560px;
