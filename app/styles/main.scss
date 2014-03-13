@@ -82,3 +82,11 @@ div > div > img {
         }
     }
 }
+
+#connector {
+    transition: opacity 1s ease;
+}
+
+:not(.active) > p > #connector {
+    opacity: 0;
+}

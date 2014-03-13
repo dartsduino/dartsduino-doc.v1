@@ -42,7 +42,7 @@
 <img id='layer0' src='images/back.jpg' width='560' height='693' class='center'>
 
 
-##     <!-- rotate-x: -70, rotate-y: -45, dx: 1500, dy: 0, dz: 0 -->
+##     <!-- rotate-x: -70, rotate-y: -45, dx: 0, dy: 0, dz: 0 -->
 
 <div id='layers' class='center'>
   ![Layer 1   <!-- class: 'layer', id: 'layer1', width: 560 -->](images/back.jpg)
@@ -51,7 +51,12 @@
 </div>
 
 
-## 動作の原理    <!-- class: 'slide' -->
+##     <!-- x: 160, y: 2120, z: 0, rotate-x: -35, rotate-y: -70, rotate-z: 35, scale: 0.15 -->
+
+![Connector   <!-- class: 'center', id: 'connector', width: 1000 -->](images/connector.jpg)
+
+
+## 動作の原理    <!-- x: 0, y: 3000, z: 0, class: 'slide', dx: 1500, dy: 0, dz: 0 -->
 
 
 
