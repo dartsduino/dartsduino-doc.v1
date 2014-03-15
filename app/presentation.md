@@ -25,6 +25,8 @@
 
 * 物理的な何かとのインタラクション
 * 集合知の活用
+  * ソフトウエア・ハードウェアの派生
+  * 制作過程の派生
 * 安価、簡易
 
 
@@ -35,6 +37,19 @@
   src='http://www.youtube.com/embed/sHt_5in-ziQ'
   frameborder='0' class='center'>
 </_iframe>
+
+
+## 構成要素    <!-- class: 'slide' -->
+
+* GitHub
+  * dartsduino
+     * darts-ui
+     * dartsduino-games-countup
+     * dartsduino-games-x01  
+  * dartsduino-firefox-addon
+  * dartsduino-sketch
+* GitFab
+  * dartsduino-hw
 
 
 ##     <!-- x: 0, y: 2000, z: -10, rotate-y: 180 -->
@@ -66,3 +81,15 @@
 
 
 ## 回路図    <!-- class: 'slide' -->
+
+
+
+## Contributions 求む
+
+* core のアーキテクチャ (dartsduino)
+* UI のデザイン (dartsduino-ui)
+* ゲーム gem (dartsduino-games-xxx)
+* 効果音 (dartsduino, dartsduino-ui)
+* Sketch (dartsduino-skecth)
+* 回路 (dartsduino-hw)
+
