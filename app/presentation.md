@@ -1,5 +1,5 @@
 
-## dartsduino    <!-- class: 'slide' -->
+# dartsduino    <!-- class: 'slide', id: 'title' -->
 
 寺戸 育夫
 
@@ -8,6 +8,10 @@
 
 * 所属
 * 関わった商品
+
+<div class='note'>
+  (※注 : 本件は、寺戸の個人的な活動や成果物を記したものであり、<br> 寺戸が所属する会社とは一切関係ありません。)
+</div>
 
 
 ## 背景    <!-- class: 'slide', dx: 0, dy: 0 -->
@@ -84,7 +88,7 @@
 
 
 
-## Contributions 求む
+## Contributions 求む!    <!-- class: 'slide' -->
 
 * core のアーキテクチャ (dartsduino)
 * UI のデザイン (dartsduino-ui)
