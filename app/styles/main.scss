@@ -1,4 +1,8 @@
 
+body {
+    background-color: #fff;
+}
+
 h2 {
     font-size: 48px;
 }
@@ -9,6 +13,17 @@ pre {
 
 img {
     backface-visibility: hidden;
+}
+
+#title {
+    padding-top: 200px;
+    font-size: 48px;
+}
+
+.note {
+    font-size: 28px;
+    position: absolute;
+    bottom: 50px;
 }
 
 .center {
