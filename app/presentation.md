@@ -56,17 +56,17 @@
   * dartsduino-hw
 
 
-##     <!-- x: 0, y: 2000, z: -10, rotate-y: 180 -->
+##     <!-- x: 10000, y: 2000, z: -10, rotate-y: -180, dx: 0, dy: 0, dz: 0 -->
 
 ![Front   <!-- class: 'center', id: 'front', width: 560 -->](images/front.jpg)
 
 
-##     <!-- x: 0, y: 2000, z: 0, dx: 0, dy: 0, dz: 200 -->
+##     <!-- z: 0 -->
 
 ![Back    <!-- class: 'center', id: 'back', width: 560 -->](images/back.jpg)
 
 
-##     <!-- rotate-x: -70, rotate-y: -45, dx: 0, dy: 0, dz: 0 -->
+##     <!-- z: 200, rotate-x: -70, rotate-y: -45, dx: 160, dy: 120 -->
 
 <div id='layers' class='center'>
   ![Layer 1   <!-- class: 'layer', id: 'layer1', width: 560 -->](images/back.jpg)
@@ -75,7 +75,7 @@
 </div>
 
 
-##     <!-- x: 160, y: 2120, z: 0, rotate-x: -35, rotate-y: -70, rotate-z: 35, scale: 0.15 -->
+##     <!-- z: 0, rotate-x: -35, rotate-y: -70, rotate-z: 35, scale: 0.15 -->
 
 ![Connector   <!-- class: 'center', id: 'connector', width: 1000 -->](images/connector.jpg)
 
