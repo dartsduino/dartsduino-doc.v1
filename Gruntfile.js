@@ -61,7 +61,6 @@ module.exports = function (grunt) {
             },
             presentation: {
                 files: ['<%= yeoman.app %>/scripts/presentation.js', '<%= yeoman.app %>/presentation.md'],
-                // tasks: ['uglify:livereload', 'replace:livereload'],
                 tasks: ['replace:livereload'],
                 options: {
                     livereload: true
@@ -300,16 +299,6 @@ module.exports = function (grunt) {
         //     dist: {}
         // },
 
-        uglify: {
-            livereload: {
-                files: {
-                    '.tmp/scripts/presentation.js': [
-                        '.tmp/scripts/presentation.js'
-                    ]
-                }
-            }
-        },
-
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -361,12 +350,17 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'presentation',
-                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n") %>'
+                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n").replace(/\"/g, "\'") %>'
                         }
                     ]
                 },
                 files: [
-                    {expand: true, flatten: true, src: ['.tmp/concat/scripts/presentation.js'], dest: '.tmp/concat/scripts/'}
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['<%= yeoman.dist %>/scripts/presentation.js'],
+                        dest: '<%= yeoman.dist %>/scripts/'
+                    }
                 ]
             },
             livereload: {
@@ -374,12 +368,17 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'presentation',
-                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n") %>'
+                            replacement: '<%= grunt.file.read("app/presentation.md").replace(/\\n/g, "\\\\n\\\\\\n").replace(/\"/g, "\'") %>'
                         }
                     ]
                 },
                 files: [
-                    {expand: true, flatten: true, src: ['app/scripts/presentation.js'], dest: '.tmp/scripts/'}
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['<%= yeoman.app %>/scripts/presentation.js'],
+                        dest: '.tmp/scripts/'
+                    }
                 ]
             }
         }
@@ -431,7 +430,7 @@ module.exports = function (grunt) {
         'uglify',
         'replace:dist',
         'copy:dist',
-        'rev',
+        // 'rev',
         'usemin',
         'htmlmin'
     ]);
