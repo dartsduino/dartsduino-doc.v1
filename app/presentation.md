@@ -66,16 +66,27 @@
 ![Back    <!-- class: "center", id: "back", width: 560 -->](images/back.jpg)
 
 
-##     <!-- z: 200, rotate-x: -70, rotate-y: -45, dx: 160, dy: 120 -->
+##     <!-- id: "sheets", z: 200, rotate-x: -70, rotate-y: -45 -->
 
 <div id="layers" class="center">
-  ![Layer 1   <!-- class: "layer", id: "layer1", width: 560 -->](images/back.jpg)
-  ![Layer 2   <!-- class: "layer", id: "layer2", width: 560 -->](images/back.jpg)
-  ![Layer 3   <!-- class: "layer", id: "layer3", width: 560 -->](images/back.jpg)
+  ![Layer 1   <!-- class: "layer", id: "layer1", width: 560 -->](images/sheetBottom.svg)
+  ![Layer 2   <!-- class: "layer", id: "layer2", width: 560 -->](images/sheetMiddle.svg)
+  ![Layer 3   <!-- class: "layer", id: "layer3", width: 560 -->](images/sheetBottom.svg)
 </div>
 
 
-##     <!-- z: 0, rotate-x: -35, rotate-y: -70, rotate-z: 35, scale: 0.15 -->
+##     <!-- id: "sheets-detail" -->
+
+
+##     <!-- id: "sheets-simple" -->
+
+<div id="rel" class="center">
+  ![Layer 1   <!-- class="abs", id: "sheetBS", width: 560 -->](images/sheetBottomS.svg)
+  ![Layer 3   <!-- class="abs", id: "sheetTS", width: 560 -->](images/sheetBottomS.svg)
+</div>
+
+
+##     <!-- x: 10160, y: 2120, z: 0, rotate-x: -35, rotate-y: -70, rotate-z: 35, scale: 0.15 -->
 
 ![Connector   <!-- class: "center", id: "connector", width: 1000 -->](images/connector.jpg)
 
