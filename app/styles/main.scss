@@ -32,6 +32,16 @@ img {
     margin-right: auto;
 }
 
+#rel {
+    position: relative;
+    width: 560px;
+    height: 693px;
+}
+
+.abs {
+    position: absolute;
+}
+
 #front {
     transition: opacity 1s ease;
 }
@@ -51,10 +61,6 @@ img {
     transition: opacity 1s ease 0.2s, transform 1s ease;
 }
 
-#layer0 {
-    transform: rotateX(0deg);
-}
-
 $layer-rotate-y: 45deg;
 $layer-rotate-x: 70deg;
 $layer-margin: 100px;
@@ -63,7 +69,7 @@ $layer-margin: 100px;
     opacity: 0;
 }
 
-div > div > img {
+.layer {
     transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x);
     transition: transform 1s ease;
 }
@@ -72,8 +78,48 @@ div > div > img {
     @for $i from 1 through 3 {
         #layer#{$i} {
             transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateZ($layer-margin * $i - 100);
-            transition: transform 1s ease 0.5s;
+            transition: transform 1s ease 0.8s;
         }
+    }
+}
+
+.impress-on-sheets-detail {
+    #sheets {
+        opacity: 1;
+    }
+
+    #layer1 {
+        opacity: 1;
+        transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateX(-500px);
+    }
+    #layer2 {
+        opacity: 1;
+        transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateX(   0px);
+    }
+    #layer3 {
+        opacity: 1;
+        transform: rotateY($layer-rotate-y) rotateX($layer-rotate-x) translateX( 500px);
+    }
+
+    #back {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+}
+
+.impress-on-sheets-simple {
+    #sheetBS {
+        opacity: 0.2;
+        transform: translateX(-500px);
+    }
+    #sheetTS {
+        opacity: 1;
+        transform: translateX( 500px);
+    }
+
+    #back {
+        opacity: 0;
+        transition: opacity 1s ease;
     }
 }
 
